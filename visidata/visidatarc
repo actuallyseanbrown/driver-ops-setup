@@ -1,0 +1,9 @@
+# Sean driver-ops .visidatarc
+# Raw is sacred — prefer Save As into staging/, not overwrite.
+
+import os
+
+options.disp_help = 0
+options.quitguard = True
+options.clipboard_copy_cmd = 'clip.exe' if os.path.exists('/mnt/c/Windows/System32/clip.exe') else options.clipboard_copy_cmd
+options.disp_float_fmt = '{:.6g}'
