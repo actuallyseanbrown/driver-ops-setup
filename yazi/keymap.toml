@@ -1,0 +1,40 @@
+# Sean driver-ops bookmarks — ~/.config/yazi/keymap.toml
+[[manager.prepend_keymap]]
+on = [ "g", "d" ]
+run = "cd ~/driver-ops"
+desc = "driver-ops root"
+
+[[manager.prepend_keymap]]
+on = [ "g", "r" ]
+run = "cd ${DRIVER_OPS_CLIENT:-~/driver-ops/clients/demo}/raw"
+desc = "client raw"
+
+[[manager.prepend_keymap]]
+on = [ "g", "c" ]
+run = "cd ${DRIVER_OPS_CLIENT:-~/driver-ops/clients/demo}/catalog"
+desc = "client catalog"
+
+[[manager.prepend_keymap]]
+on = [ "g", "e" ]
+run = "cd ${DRIVER_OPS_CLIENT:-~/driver-ops/clients/demo}/recipes"
+desc = "client recipes"
+
+[[manager.prepend_keymap]]
+on = [ "g", "s" ]
+run = "cd ${DRIVER_OPS_CLIENT:-~/driver-ops/clients/demo}/staging"
+desc = "client staging"
+
+[[manager.prepend_keymap]]
+on = [ "g", "o" ]
+run = "cd ${DRIVER_OPS_CLIENT:-~/driver-ops/clients/demo}/out"
+desc = "client out"
+
+[[manager.prepend_keymap]]
+on = [ "g", "w" ]
+run = "cd ${DRIVER_OPS_CLIENT:-~/driver-ops/clients/demo}/warehouse"
+desc = "client warehouse"
+
+[[manager.prepend_keymap]]
+on = [ "v", "d" ]
+run = 'shell "vd \"$0\"" --confirm'
+desc = "open in VisiData"
