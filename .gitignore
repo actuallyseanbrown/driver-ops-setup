@@ -1,0 +1,13 @@
+# Never commit client data
+clients/*/raw/**
+!clients/*/raw/.gitkeep
+clients/*/staging/**
+!clients/*/staging/.gitkeep
+clients/*/warehouse/**
+!clients/*/warehouse/.gitkeep
+clients/*/out/**
+!clients/*/out/.gitkeep
+.venv/
+__pycache__/
+.env
+.DS_Store
