@@ -1,0 +1,4 @@
+driver_unique_name,driver_name,driver_category,driver_classification,driver_units,grain_rule,enabled,status,source_recipe,source_files_glob,region_default,subregion_default,qualifier_default,qualifier_2_default,denorm_default,notes
+plant_throughput_tons,Plant throughput,Operations,volume,tons,sum,true,mapped,example_source_shape,raw/*throughput*,NA,,,,"",Demo row — replace with real drivers
+utilization_pct,Utilization %,Operations,percentage,pct,pct_special,true,needs_mapping,,,NA,,,,"",Example of a driver not yet mapped
+parked_legacy_metric,Legacy metric,Other,other,units,last,false,parked,,,,,"","",Disabled on purpose
