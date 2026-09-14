@@ -1,40 +1,58 @@
 # Sean driver-ops bookmarks — ~/.config/yazi/keymap.toml
-[[manager.prepend_keymap]]
+# Use [mgr] (not deprecated [manager]). Set DRIVER_OPS_CLIENT via `client <slug>`.
+#
+# Stock collisions we override:
+#   gd = Downloads  → remapped to gl
+#   gc = often config → remapped to gC (Win/config home)
+
+[[mgr.prepend_keymap]]
 on = [ "g", "d" ]
 run = "cd ~/driver-ops"
 desc = "driver-ops root"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = [ "g", "r" ]
 run = "cd ${DRIVER_OPS_CLIENT:-~/driver-ops/clients/demo}/raw"
 desc = "client raw"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = [ "g", "c" ]
 run = "cd ${DRIVER_OPS_CLIENT:-~/driver-ops/clients/demo}/catalog"
 desc = "client catalog"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = [ "g", "e" ]
 run = "cd ${DRIVER_OPS_CLIENT:-~/driver-ops/clients/demo}/recipes"
 desc = "client recipes"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = [ "g", "s" ]
 run = "cd ${DRIVER_OPS_CLIENT:-~/driver-ops/clients/demo}/staging"
 desc = "client staging"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = [ "g", "o" ]
 run = "cd ${DRIVER_OPS_CLIENT:-~/driver-ops/clients/demo}/out"
 desc = "client out"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = [ "g", "w" ]
 run = "cd ${DRIVER_OPS_CLIENT:-~/driver-ops/clients/demo}/warehouse"
 desc = "client warehouse"
 
-[[manager.prepend_keymap]]
+# Stock Downloads moved off gd so which-key label matches action
+[[mgr.prepend_keymap]]
+on = [ "g", "l" ]
+run = "cd ~/Downloads"
+desc = "Downloads"
+
+# Stock config dir moved off gc
+[[mgr.prepend_keymap]]
+on = [ "g", "C" ]
+run = "cd ~/.config"
+desc = "Config home"
+
+[[mgr.prepend_keymap]]
 on = [ "v", "d" ]
 run = 'shell "vd \"$0\"" --confirm'
 desc = "open in VisiData"

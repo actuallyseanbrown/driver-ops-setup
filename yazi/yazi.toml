@@ -1,5 +1,7 @@
 # Sean driver-ops — ~/.config/yazi/yazi.toml
-[manager]
+# [mgr] replaces deprecated [manager]
+
+[mgr]
 ratio = [1, 3, 3]
 sort_by = "mtime"
 sort_reverse = true
